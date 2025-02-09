@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do You Love Men zen dyali yousra?</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Love-themed gradient */
+      color: white;
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .button-container {
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #ff416c;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background-color: #ff4b5c;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    #heart {
+      font-size: 50px;
+      color: #ff4b5c;
+      animation: heartbeat 1.5s infinite ease-in-out;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .heart-container {
+      margin-top: 20px;
+      font-size: 60px;
+      color: #ff416c;
+    }
+
+    .no-btn {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Do You Love Me zen dyali yousra? 💖</h1>
+  
+  <div class="heart-container">
+    <span id="heart">❤️</span>
+  </div>
+
+  <div class="button-container">
+    <button id="yes-btn" onclick="loveMe()">Yes</button>
+    <button id="no-btn" class="no-btn">No</button>
+  </div>
+
+  <script>
+    // Function for "Yes" button click
+    function loveMe() {
+      alert("I love you! ❤️");
+    }
+
+    // Function for "No" button click (moves the button randomly)
+    const noBtn = document.getElementById("no-btn");
+    noBtn.addEventListener("click", () => {
+      const newX = Math.floor(Math.random() * window.innerWidth);
+      const newY = Math.floor(Math.random() * window.innerHeight);
+      noBtn.style.left = `${newX}px`;
+      noBtn.style.top = `${newY}px`;
+    });
+  </script>
+</body>
+</html>
